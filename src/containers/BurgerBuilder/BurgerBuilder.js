@@ -99,6 +99,14 @@ this.setState({totalPrice: newPrice, ingredients:updateIngredients});
 this.updatePurchasedState(updateIngredients);
 }
 
+purchaseCancelHandler = () => {
+  this.setState({purchasing:false});
+}
+
+purchaseContinuehandler = () =>{
+  alert('You are continuing');
+}
+
 purchaseHandler = () => {
 this.setState({purchasing:true});
 }
@@ -118,13 +126,18 @@ return(
 <Modal show={this.state.purchasing}
 removeModal = {this.removeModalHandler2} >
 <OrderSummary
-removeModal = {this.removeModalHandler2}
+purchaseCancelled =
+{this.purchaseCancelHandler}
+purchaseContinued = {this.purchaseContinuehandler}
+price={this.state.totalPrice}
+label="Order Total"
   ingredients={this.state.ingredients} />
 </Modal>
 <Burger ingredients={this.state.ingredients}/>
 <BuildControls ingredientAdded={this.addIngredientHandler}
 ingredientRemoved={this.removeIngredientHandler}
 disabled={disabledInfo}
+label="Total"
  purchaseable={this.state.purchaseable}
  price={this.state.totalPrice}
  ordered={this.purchaseHandler}

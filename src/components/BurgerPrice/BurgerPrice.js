@@ -3,7 +3,7 @@ import classes from './BurgerPrice.css';
 
 const burgerPrice  = (props) => (
 <div className={classes.Price}>
-Current Price: {props.price.toFixed(2)}
+{props.label}: {props.price.toFixed(2)}
 </div>
 );
 

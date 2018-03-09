@@ -1,14 +1,14 @@
 import React from 'react';
 import Auxilliary from '../../hoc/Auxilliary';
-import BurgerBuilder from '../../containers/BurgerBuilder/BurgerBuilder';
+import Toolbar from '../Navigation/Toolbar/Toolbar';
 import classes from './Layout.css';
 const layout = (props) => (
   <Auxilliary>
-  <div>Toolbar, SideDrawer, BackDrop</div>
+  <Toolbar />
   <main className = {classes.Content}>
   {props.children}
   </main>
-  <BurgerBuilder />
+
   </Auxilliary>
 );
 

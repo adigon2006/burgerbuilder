@@ -11,7 +11,7 @@ const controls = [
 const buildControls = (props) =>
   (
    <div className={classes.BuildControls}>
-   <BurgerPrice price={props.price} />
+   <BurgerPrice label={props.label} price={props.price} />
     {controls.map( control => (
       <BuildControl
       removed ={() => props.ingredientRemoved(control.type)}
