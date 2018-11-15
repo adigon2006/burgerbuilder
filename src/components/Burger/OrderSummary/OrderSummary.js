@@ -27,8 +27,7 @@ class OrderSummary extends Component
   <Auxilliary>
 
   <h3>Your Order</h3>
-  <p>A delicious Burger with the following ingredients:<
-  /p>
+  <p>A delicious Burger with the following ingredients:</p>
   <ul>
   {ingredientSummary}
   </ul>
