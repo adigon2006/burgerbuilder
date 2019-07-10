@@ -32,7 +32,6 @@ export const initIngredient = () => {
     return (dispatch) => {
     axios.get('https://adigs-burger-project.firebaseio.com/ingredients.json')
   .then(response => {
-    console.log(response.data); 
     dispatch(setIngredients(response.data));
     }).catch(error => {
       dispatch(fetchIngredientsFailed());  
